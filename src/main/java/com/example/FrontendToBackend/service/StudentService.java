@@ -19,4 +19,9 @@ public class StudentService {
     public List<Student> getAllStudents(){
         return list;
     }
+
+    public void addStudents(int rno,String name,String technology) {
+        Student student = new Student(rno,name,technology);
+        list.add(student);
+    }
 }
