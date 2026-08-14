@@ -3,6 +3,7 @@ package com.example.FrontendToBackend.controller;
 import com.example.FrontendToBackend.models.Student;
 import com.example.FrontendToBackend.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -11,7 +12,8 @@ import java.util.List;
 public class StudentController {
     @Autowired
     StudentService studentService;
-    public List<Student> getAllStudent(){
-        return studentService.getAllStudent();
+    @GetMapping("/students")
+    public List<Student> getAllStudents(){
+        return studentService.getAllStudents();
     }
 }

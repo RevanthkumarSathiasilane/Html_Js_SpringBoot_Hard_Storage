@@ -3,11 +3,20 @@ package com.example.FrontendToBackend.service;
 import com.example.FrontendToBackend.models.Student;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @Service
 public class StudentService {
-    public List<Student> getAllStudent(){
-
+    List<Student> list = new ArrayList<>(
+            Arrays.asList(
+                    new Student(1,"Revanth","Java"),
+                    new Student(2,"Praveen","AI"),
+                    new Student(3,"Akash","IoT")
+            )
+    );
+    public List<Student> getAllStudents(){
+        return list;
     }
 }
