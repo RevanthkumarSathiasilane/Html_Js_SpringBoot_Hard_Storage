@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <title>HTML+JS <-> Spring Boot</title>
+</head>
+<body>
+     <h2>My First Backend Project</h2>
+     <button onclick ="getStudents()">Show Students</button>
+     <a href="register.html">Register!!</a>
+
+
+
+
+     <script>
+          function getStudents(){
+        fetch("http://localhost:8080/students")//API ENDPOINT
+        .then((response) => response.json())//JSON CONVERSION
+        .then((data) => console.log(data));//LOGGING THE DATA
+          }
+     </script>
+</body>
+</html>
